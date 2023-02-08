@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="AutoTestWithReport" duration-ms="28473" started-at="2022-09-21T19:21:23 CST" finished-at="2022-09-21T19:21:52 CST">
+    <groups>
+      <group name="ui_auto">
+        <method signature="LoginCase.invalidLoginServerCNTest()[pri:1, instance:testcase.LoginCase@7f13d6e]" name="invalidLoginServerCNTest" class="testcase.LoginCase"/>
+        <method signature="LoginCase.validLoginServerCNTest()[pri:0, instance:testcase.LoginCase@7f13d6e]" name="validLoginServerCNTest" class="testcase.LoginCase"/>
+      </group> <!-- ui_auto -->
+    </groups>
+    <test name="ExecutingTestBySuite_self" duration-ms="28473" started-at="2022-09-21T19:21:23 CST" finished-at="2022-09-21T19:21:52 CST">
+      <class name="testcase.LoginCase">
+        <test-method status="PASS" signature="initSource()[pri:0, instance:testcase.LoginCase@7f13d6e]" name="initSource" is-config="true" duration-ms="9180" started-at="2022-09-21T19:21:23 CST" finished-at="2022-09-21T19:21:32 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSource -->
+        <test-method status="PASS" signature="initPage()[pri:0, instance:testcase.LoginCase@7f13d6e]" name="initPage" is-config="true" duration-ms="128" started-at="2022-09-21T19:21:32 CST" finished-at="2022-09-21T19:21:33 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method status="PASS" signature="validLoginServerCNTest()[pri:0, instance:testcase.LoginCase@7f13d6e]" name="validLoginServerCNTest" duration-ms="5167" started-at="2022-09-21T19:21:33 CST" description="This is a testcase description for normal login." finished-at="2022-09-21T19:21:38 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginServerCNTest -->
+        <test-method status="PASS" signature="invalidLoginServerCNTest()[pri:1, instance:testcase.LoginCase@7f13d6e]" name="invalidLoginServerCNTest" duration-ms="10535" started-at="2022-09-21T19:21:38 CST" description="This is a testcase for wrong login." finished-at="2022-09-21T19:21:48 CST">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: val_loginAccount (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: val_loginAccount (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at page.BasePage.waitVisibility(BasePage.java:40)
+at page.BasePage.writeText(BasePage.java:28)
+at page.ServerLoginPage.verifyUsernameAndPassword(ServerLoginPage.java:32)
+at testcase.LoginCase.invalidLoginServerCNTest(LoginCase.java:24)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: #val_loginAccount
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VDI-ZNKZ-001', ip: '20.60.5.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 105.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220915150737, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 35596, moz:profile: C:\Users\GRT-LI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7e29c9d1-fb0d-4775-8890-14234ba098db
+*** Element info: {Using=id, value=val_loginAccount}
+at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 36 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginServerCNTest -->
+        <test-method status="PASS" signature="initPage()[pri:0, instance:testcase.LoginCase@7f13d6e]" name="initPage" is-config="true" duration-ms="0" started-at="2022-09-21T19:21:38 CST" finished-at="2022-09-21T19:21:38 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method status="PASS" signature="shutdownSource()[pri:0, instance:testcase.LoginCase@7f13d6e]" name="shutdownSource" is-config="true" duration-ms="3407" started-at="2022-09-21T19:21:48 CST" finished-at="2022-09-21T19:21:52 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutdownSource -->
+      </class> <!-- testcase.LoginCase -->
+    </test> <!-- ExecutingTestBySuite_self -->
+  </suite> <!-- AutoTestWithReport -->
+</testng-results>
